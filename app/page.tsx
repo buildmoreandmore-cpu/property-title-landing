@@ -234,6 +234,60 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Credentials Section */}
+        <div className="max-w-6xl mx-auto mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+            Licensed & Certified Property Specialists
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div className="bg-white border border-gray-200 rounded-lg px-6 py-4 text-center">
+              <span className="text-gray-600 font-medium">Real Estate Law Certified</span>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg px-6 py-4 text-center">
+              <span className="text-gray-600 font-medium">Title Insurance Licensed</span>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg px-6 py-4 text-center">
+              <span className="text-gray-600 font-medium">Probate Court Approved</span>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg px-6 py-4 text-center">
+              <span className="text-gray-600 font-medium">Better Business Bureau A+</span>
+            </div>
+          </div>
+          
+          {/* v0 block tag */}
+          <div className="text-center">
+            <div className="inline-block bg-gray-200 text-gray-600 px-3 py-1 rounded-md text-sm">
+              v0 block
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Final CTA Footer */}
+      <div className="bg-green-600 py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Stop Letting Title Issues Block Your Sale
+          </h2>
+          
+          <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Get expert help with inheritance disputes, co-ownership problems, and complex title issues.
+          </p>
+          
+          <button 
+            onClick={() => {
+              document.querySelector('input[name="fullName"]')?.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center' 
+              });
+            }}
+            className="bg-green-700 hover:bg-green-800 text-white font-semibold text-lg px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg"
+          >
+            Solve My Property Issues Now!
+          </button>
+        </div>
       </div>
     </div>
   );
