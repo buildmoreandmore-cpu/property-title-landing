@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { Loader } from "@googlemaps/js-api-loader";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -8,6 +9,51 @@ export default function Home() {
     email: "",
     propertyAddress: "",
   });
+  
+  const addressInputRef = useRef<HTMLInputElement>(null);
+  const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null);
+
+  // Initialize Google Places Autocomplete
+  useEffect(() => {
+    const initializeAutocomplete = async () => {
+      if (!addressInputRef.current) return;
+      
+      try {
+        const loader = new Loader({
+          apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "",
+          version: "weekly",
+          libraries: ["places"]
+        });
+
+        await loader.load();
+        
+        const autocomplete = new google.maps.places.Autocomplete(
+          addressInputRef.current,
+          {
+            types: ["address"],
+            componentRestrictions: { country: ["us"] },
+            fields: ["formatted_address", "geometry"]
+          }
+        );
+
+        autocomplete.addListener("place_changed", () => {
+          const place = autocomplete.getPlace();
+          if (place.formatted_address) {
+            setFormData(prev => ({
+              ...prev,
+              propertyAddress: place.formatted_address
+            }));
+          }
+        });
+
+        autocompleteRef.current = autocomplete;
+      } catch (error) {
+        console.log("Google Maps API not available, using fallback");
+      }
+    };
+
+    initializeAutocomplete();
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -104,6 +150,7 @@ Please contact this lead regarding their property title issues.`
               
               <div>
                 <input
+                  ref={addressInputRef}
                   type="text"
                   name="propertyAddress"
                   placeholder="Property Address"
@@ -111,6 +158,7 @@ Please contact this lead regarding their property title issues.`
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent placeholder-gray-500"
                   required
+                  autoComplete="off"
                 />
               </div>
               
