@@ -47,7 +47,7 @@ export default function Home() {
         });
 
         autocompleteRef.current = autocomplete;
-      } catch (error) {
+      } catch {
         console.log("Google Maps API not available, using fallback");
       }
     };
