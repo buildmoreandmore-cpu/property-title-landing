@@ -113,7 +113,7 @@ export default function Home() {
                 <div className="flex items-center justify-center mb-2">
                   <span className="text-red-500 mr-2">🛑</span>
                   <span className="text-red-700 font-medium">
-                    Don't Let Legal Issues Block Your Sale Any Longer!
+                    Don&apos;t Let Legal Issues Block Your Sale Any Longer!
                   </span>
                 </div>
               </div>
