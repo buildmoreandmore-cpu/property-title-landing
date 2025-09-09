@@ -28,9 +28,6 @@ export default function Home() {
       <div className="max-w-4xl mx-auto">
         {/* Header with v0 block tag */}
         <div className="text-center mb-8">
-          <div className="inline-block bg-gray-200 text-gray-600 px-3 py-1 rounded-md text-sm mb-8">
-            v0 block
-          </div>
           
           {/* Main heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -174,12 +171,6 @@ export default function Home() {
             </div>
           </div>
           
-          {/* v0 block tag */}
-          <div className="text-center">
-            <div className="inline-block bg-gray-200 text-gray-600 px-3 py-1 rounded-md text-sm">
-              v0 block
-            </div>
-          </div>
         </div>
 
         {/* We Solve What Others Can't Section */}
@@ -256,12 +247,6 @@ export default function Home() {
             </div>
           </div>
           
-          {/* v0 block tag */}
-          <div className="text-center">
-            <div className="inline-block bg-gray-200 text-gray-600 px-3 py-1 rounded-md text-sm">
-              v0 block
-            </div>
-          </div>
         </div>
       </div>
 
