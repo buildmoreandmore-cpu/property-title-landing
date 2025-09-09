@@ -48,32 +48,8 @@ Please contact this lead regarding their property title issues.`
     
     const mailtoLink = `mailto:martin@homeowner-support.com?subject=${subject}&body=${body}`;
     
-    // Try multiple approaches to open email client
-    try {
-      // First try: direct window.location
-      window.location.href = mailtoLink;
-      
-      // Fallback: create temporary link and click it
-      const tempLink = document.createElement('a');
-      tempLink.href = mailtoLink;
-      tempLink.target = '_blank';
-      document.body.appendChild(tempLink);
-      tempLink.click();
-      document.body.removeChild(tempLink);
-      
-      // Show confirmation
-      alert("Opening your email client... If it doesn't open automatically, please email martin@homeowner-support.com with your details.");
-      
-    } catch (error) {
-      // Final fallback: copy to clipboard and show instructions
-      const emailText = `Please email martin@homeowner-support.com with the following details:\n\nSubject: Property Title Issue - New Lead\n\nFull Name: ${formData.fullName}\nEmail: ${formData.email}\nProperty Address: ${formData.propertyAddress}`;
-      
-      navigator.clipboard.writeText(emailText).then(() => {
-        alert("Email details copied to clipboard! Please paste into your email client and send to martin@homeowner-support.com");
-      }).catch(() => {
-        alert(`Please email martin@homeowner-support.com with these details:\n\nFull Name: ${formData.fullName}\nEmail: ${formData.email}\nProperty Address: ${formData.propertyAddress}`);
-      });
-    }
+    // Open email client with mailto link
+    window.location.href = mailtoLink;
   };
 
   return (
