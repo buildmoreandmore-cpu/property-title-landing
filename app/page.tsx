@@ -41,7 +41,7 @@ export default function Home() {
           if (place.formatted_address) {
             setFormData(prev => ({
               ...prev,
-              propertyAddress: place.formatted_address
+              propertyAddress: place.formatted_address || ""
             }));
           }
         });
