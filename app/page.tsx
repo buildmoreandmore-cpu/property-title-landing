@@ -19,8 +19,23 @@ export default function Home() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // TODO: Add form submission logic
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent("Property Title Issue - New Lead");
+    const body = encodeURIComponent(
+      `New Property Title Lead:
+
+Full Name: ${formData.fullName}
+Email: ${formData.email}
+Property Address: ${formData.propertyAddress}
+
+Please contact this lead regarding their property title issues.`
+    );
+    
+    const mailtoLink = `mailto:martin@homeowner-support.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
   };
 
   return (
