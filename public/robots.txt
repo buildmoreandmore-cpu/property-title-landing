@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+
+# Allow search engines to crawl the site
+User-agent: Googlebot
+Allow: /
+
+# Allow ChatGPT and other AI crawlers
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.cleartitlega.com/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1

@@ -75,21 +75,27 @@ Please contact this lead regarding their property title issues.`
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <div className="flex items-center bg-orange-50 border border-orange-200 rounded-lg px-4 py-2">
               <span className="text-orange-600 mr-2">⚠</span>
-              <span className="text-orange-700 font-medium">Title Disputes</span>
+              <a href="#title-disputes" className="text-orange-700 font-medium hover:text-orange-800 transition-colors">
+                Title Disputes
+              </a>
             </div>
             <div className="flex items-center bg-orange-50 border border-orange-200 rounded-lg px-4 py-2">
               <span className="text-orange-600 mr-2">👥</span>
-              <span className="text-orange-700 font-medium">Co-Ownership Issues</span>
+              <a href="#co-ownership" className="text-orange-700 font-medium hover:text-orange-800 transition-colors">
+                Co-Ownership Issues
+              </a>
             </div>
             <div className="flex items-center bg-orange-50 border border-orange-200 rounded-lg px-4 py-2">
               <span className="text-orange-600 mr-2">📋</span>
-              <span className="text-orange-700 font-medium">Inheritance Problems</span>
+              <a href="#inheritance" className="text-orange-700 font-medium hover:text-orange-800 transition-colors">
+                Inheritance Problems
+              </a>
             </div>
           </div>
         </div>
 
         {/* Contact form */}
-        <div className="max-w-md mx-auto mb-20">
+        <div id="contact" className="max-w-md mx-auto mb-20">
           <div className="bg-white rounded-lg shadow-lg p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -207,10 +213,10 @@ Please contact this lead regarding their property title issues.`
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-16">
             We Solve What Others Can&apos;t
           </h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Title Issue Resolution */}
-            <div className="text-center">
+            <div id="title-disputes" className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -221,7 +227,7 @@ Please contact this lead regarding their property title issues.`
             </div>
 
             {/* Co-Ownership Solutions */}
-            <div className="text-center">
+            <div id="co-ownership" className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -251,6 +257,89 @@ Please contact this lead regarding their property title issues.`
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-3">Fair Cash Offers</h3>
               <p className="text-gray-600">Get paid despite the complications</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Detailed Services Section */}
+        <div className="max-w-6xl mx-auto mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+            Our Georgia Property Title Services
+          </h2>
+
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Inheritance Property Issues */}
+            <div id="inheritance" className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Inheritance Property Disputes</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                When family members inherit property together, disagreements often arise about what to do with the property.
+                Our <a href="#co-ownership" className="text-green-600 hover:text-green-700 font-medium">co-ownership solutions</a> help
+                resolve these disputes quickly and fairly.
+              </p>
+              <ul className="text-gray-600 space-y-2 mb-6">
+                <li>• Multiple heir property disputes</li>
+                <li>• Probate property complications</li>
+                <li>• Estate settlement issues</li>
+                <li>• Sibling property disagreements</li>
+              </ul>
+              <a href="#contact" className="text-green-600 hover:text-green-700 font-semibold">
+                Get Help with Inheritance Issues →
+              </a>
+            </div>
+
+            {/* Divorce Property Division */}
+            <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Divorce Property Division</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Divorce can create complex property ownership situations. Our Georgia real estate experts help resolve
+                <a href="#title-disputes" className="text-green-600 hover:text-green-700 font-medium"> title disputes</a> that
+                arise from divorce proceedings.
+              </p>
+              <ul className="text-gray-600 space-y-2 mb-6">
+                <li>• Marital property division disputes</li>
+                <li>• Court-ordered property sales</li>
+                <li>• Quitclaim deed complications</li>
+                <li>• Spousal property rights issues</li>
+              </ul>
+              <a href="#contact" className="text-green-600 hover:text-green-700 font-semibold">
+                Resolve Divorce Property Issues →
+              </a>
+            </div>
+
+            {/* Liens and Judgments */}
+            <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Liens and Judgment Resolution</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Property liens and judgments can prevent you from selling your Georgia property. We specialize in clearing
+                these complex legal obstacles that block property sales.
+              </p>
+              <ul className="text-gray-600 space-y-2 mb-6">
+                <li>• Tax lien resolution</li>
+                <li>• Mechanic&apos;s lien disputes</li>
+                <li>• HOA lien problems</li>
+                <li>• Judgment lien clearing</li>
+              </ul>
+              <a href="#contact" className="text-green-600 hover:text-green-700 font-semibold">
+                Clear Property Liens →
+              </a>
+            </div>
+
+            {/* Title Insurance Claims */}
+            <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Title Insurance Claims</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                When title insurance companies deny claims or disputes arise, our licensed title experts help Georgia
+                property owners navigate these complex situations.
+              </p>
+              <ul className="text-gray-600 space-y-2 mb-6">
+                <li>• Title insurance claim denials</li>
+                <li>• Coverage disputes</li>
+                <li>• Title defect resolution</li>
+                <li>• Insurance company negotiations</li>
+              </ul>
+              <a href="#contact" className="text-green-600 hover:text-green-700 font-semibold">
+                Fight Title Insurance Denials →
+              </a>
             </div>
           </div>
         </div>
